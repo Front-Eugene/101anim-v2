@@ -49,29 +49,23 @@
     window.addEventListener("scroll", function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       let scrollHeight = body.scrollHeight - window.innerHeight;
+      let incrementalFactor = 3.1; 
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
+      let scrollPercentageFast = (scrollTop / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
-      resizableElement.style.height = scrollPercentage + "%";
+      resizableElement.style.height = scrollPercentageFast + "%";
 
-      if (scrollPercentage <= 77) {
+      if (scrollPercentage >= 67) {
+        arrows.classList.add('arrow-wrap-active')
+      } else arrows.classList.remove('arrow-wrap-active')
+
+      if (scrollPercentage >= 73) {
         arrows.style.width = scrollPercentage + "%";
       }
-    
-      if (scrollPercentage <= 10) {
-        resizableElement.style.height = "1%";
-      } 
 
-      if (scrollPercentage >= 12) {
-        resizableElement.style.height = "33%";
-      } 
-
-      if (scrollPercentage >= 20) {
-        resizableElement.style.height = "66%";
-      } 
-
-      if (scrollPercentage >= 30) {
-        resizableElement.style.height = "100%";
-      } 
+      if (scrollPercentage >= 90) {
+        arrows.classList.add('arrow-wrap-none')
+      } else arrows.classList.remove('arrow-wrap-none')
     });
 
       document.addEventListener("DOMContentLoaded", function() {
@@ -84,13 +78,13 @@
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
-          if (scrollPercentage >= 20) {
+          if (scrollPercentage >= 15) {
             item2.classList.add('perks-item-active')
           } else {
             item2.classList.remove('perks-item-active')
           }
     
-          if (scrollPercentage >= 30) {
+          if (scrollPercentage >= 28) {
             item3.classList.add('perks-item-active')
           } else {
             item3.classList.remove('perks-item-active')
@@ -116,13 +110,13 @@
       let title2 = document.querySelector(".title-wrap-2");
 
       // if (scrollPercentage >= 42) {
-      if (scrollPercentage >= 48) {
+      if (scrollPercentage >= 51) {
         title1.classList.add('overlap')
       } else {
         title1.classList.remove('overlap')
       }
 
-      if (scrollPercentage >= 56) {
+      if (scrollPercentage >= 58) {
         title2.classList.add('overlap')
       } else {
         title2.classList.remove('overlap')

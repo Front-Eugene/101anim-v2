@@ -586,7 +586,12 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        transition: 1s;
+        
+        /* transition: 1s; */
+
+        transition: opacity 1s, z-index 0.5s;
+        opacity: 0;
+        z-index: -1;
     }
 
     .perks-item h2 {
@@ -616,7 +621,13 @@ nav {
         color: #1C2818;
         opacity: 1;
         z-index: 30;
-        transition: 1s;
+
+
+        /* transition: 1s; */
+
+        opacity: 1;
+        z-index: 30;
+        transition: opacity 1s, z-index 0.5s;
     }
 
     .perks-item-active h2 {
@@ -636,6 +647,8 @@ nav {
     .perks-item-1 {
         background: #ffffff;
         color: #1C2818;
+        opacity: 1;
+        z-index: 30;
     }
 
     .perks-item-1 h2 {
@@ -672,7 +685,7 @@ nav {
 
     .arrow-wrap {
         position: sticky;
-        min-width: 70%;
+        width: 70%;
         margin: 0 auto 200px auto;
         padding: 100px 0 0 0;
         height: 20px;
@@ -682,6 +695,16 @@ nav {
         align-items: center;
         justify-content: space-between;
         z-index: 50;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .arrow-wrap-active {
+        opacity: 1;
+    }
+
+    .arrow-wrap-none {
+        display: none;
     }
 
     .projects {
@@ -698,7 +721,7 @@ nav {
     }
 
     .projects h2 {
-        margin: 140px 0 72px 0;
+        margin: -185px 0 72px 0;
         font-size: 42px;
         letter-spacing: 2px;
         color: #1C2818;
@@ -737,7 +760,7 @@ nav {
 
     .projects-shadow {
         width: 100%;
-        height: 400px;
+        height: 220px;
         position: sticky;
         bottom: 0;
         background: linear-gradient(#e6646400, #ffffff);
@@ -821,6 +844,7 @@ nav {
     .overlap {
         margin: 0;
         padding: 15px 0 50px 0;
+        border: none;
     }
 
     .overlap  h3{
@@ -939,6 +963,7 @@ nav {
         height: 605px;
         position: relative;
         margin: 0 auto;
+        margin: -70px auto 0 auto;
         /* background: #F2FBF5; */
         background: url(../img/background-main.svg);
     }
