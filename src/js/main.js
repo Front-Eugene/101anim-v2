@@ -93,11 +93,11 @@
 
 
     
-          if (scrollPercentage >= 25) {
+          if (scrollPercentage >= 24) {
             item3.classList.add('perks-item-active')
           }
 
-          if (scrollPercentage <= 25) {
+          if (scrollPercentage <= 24) {
             item3.classList.add('opacity')
             setTimeout(function() {
               item3.classList.remove('perks-item-active');
