@@ -56,7 +56,7 @@
 
       resizableElement.style.height = 1 + "%";
 
-      if (scrollPercentage >= 3) {
+      if (scrollPercentage >= 10) {
         resizableElement.style.height = scrollPercentageFast + "%";
       }
 
@@ -129,8 +129,7 @@
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
       let title1 = document.querySelector(".title-wrap-1");
       let title2 = document.querySelector(".title-wrap-2");
-
-      // if (scrollPercentage >= 51) {
+      
       if (scrollPercentage >= 55) {
         title1.classList.add('overlap')
       } else {
