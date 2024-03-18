@@ -53,6 +53,7 @@
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
       let scrollPercentageFast = (scrollTop / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
+
       resizableElement.style.height = scrollPercentageFast + "%";
 
       if (scrollPercentage >= 67) {
@@ -78,11 +79,11 @@
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
-          if (scrollPercentage >= 12) {
+          if (scrollPercentage >= 11) {
             item2.classList.add('perks-item-active')
           } 
 
-          if (scrollPercentage <= 12) {
+          if (scrollPercentage <= 11) {
             item2.classList.add('opacity')
             setTimeout(function() {
               item2.classList.remove('perks-item-active');
@@ -93,11 +94,11 @@
 
 
     
-          if (scrollPercentage >= 24) {
+          if (scrollPercentage >= 20) {
             item3.classList.add('perks-item-active')
           }
 
-          if (scrollPercentage <= 24) {
+          if (scrollPercentage <= 20) {
             item3.classList.add('opacity')
             setTimeout(function() {
               item3.classList.remove('perks-item-active');
