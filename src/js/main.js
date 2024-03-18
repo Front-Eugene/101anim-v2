@@ -82,11 +82,11 @@
             item2.classList.add('perks-item-active')
           } 
 
-          if (scrollPercentage < 12) {
+          if (scrollPercentage <= 12) {
             item2.classList.add('opacity')
             setTimeout(function() {
               item2.classList.remove('perks-item-active');
-            }, 1000);
+            }, 500);
           } else {
             item2.classList.remove('opacity')
           }
@@ -97,11 +97,11 @@
             item3.classList.add('perks-item-active')
           }
 
-          if (scrollPercentage < 25) {
+          if (scrollPercentage <= 25) {
             item3.classList.add('opacity')
             setTimeout(function() {
               item3.classList.remove('perks-item-active');
-            }, 1000);
+            }, 500);
           } else {
             item3.classList.remove('opacity')
           }
