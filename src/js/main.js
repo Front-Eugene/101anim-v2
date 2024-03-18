@@ -131,7 +131,7 @@
       let title2 = document.querySelector(".title-wrap-2");
 
       // if (scrollPercentage >= 51) {
-      if (scrollPercentage >= 53) {
+      if (scrollPercentage >= 55) {
         title1.classList.add('overlap')
       } else {
         title1.classList.remove('overlap')
