@@ -54,7 +54,11 @@
       let scrollPercentageFast = (scrollTop / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
 
-      resizableElement.style.height = scrollPercentageFast + "%";
+      resizableElement.style.height = 1 + "%";
+
+      if (scrollPercentage >= 3) {
+        resizableElement.style.height = scrollPercentageFast + "%";
+      }
 
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
@@ -79,11 +83,11 @@
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
-          if (scrollPercentage >= 11) {
+          if (scrollPercentage >= 14) {
             item2.classList.add('perks-item-active')
           } 
 
-          if (scrollPercentage <= 11) {
+          if (scrollPercentage <= 14) {
             item2.classList.add('opacity')
             setTimeout(function() {
               item2.classList.remove('perks-item-active');
@@ -127,13 +131,14 @@
       let title2 = document.querySelector(".title-wrap-2");
 
       // if (scrollPercentage >= 51) {
-      if (scrollPercentage >= 51) {
+      if (scrollPercentage >= 53) {
         title1.classList.add('overlap')
       } else {
         title1.classList.remove('overlap')
       }
 
-      if (scrollPercentage >= 58) {
+      // if (scrollPercentage >= 58) {
+      if (scrollPercentage >= 61) {
         title2.classList.add('overlap')
       } else {
         title2.classList.remove('overlap')
