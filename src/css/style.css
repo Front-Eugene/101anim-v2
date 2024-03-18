@@ -87,6 +87,7 @@ body {
     margin: 0 auto;
     background: #fff;
     font-family: 'TildaSansSemibold';
+    overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -621,13 +622,8 @@ nav {
         color: #1C2818;
         opacity: 1;
         z-index: 30;
-
-
-        /* transition: 1s; */
-
         opacity: 1;
         z-index: 30;
-        transition: opacity 1s, z-index 0.5s;
     }
 
     .perks-item-active h2 {
@@ -679,6 +675,22 @@ nav {
         width: 403px;
     }
 
+    .opacity {
+        animation: change 1s;
+    }
+
+    @keyframes change {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    
+
 /* ПРЕИМУЩЕСТВА */
 
 /* ПРОЕКТЫ */
@@ -704,7 +716,7 @@ nav {
     }
 
     .arrow-wrap-none {
-        display: none;
+        width: 70%;
     }
 
     .projects {

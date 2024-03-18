@@ -78,16 +78,32 @@
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
-          if (scrollPercentage >= 15) {
+          if (scrollPercentage >= 12) {
             item2.classList.add('perks-item-active')
+          } 
+
+          if (scrollPercentage < 12) {
+            item2.classList.add('opacity')
+            setTimeout(function() {
+              item2.classList.remove('perks-item-active');
+            }, 1000);
           } else {
-            item2.classList.remove('perks-item-active')
+            item2.classList.remove('opacity')
           }
+
+
     
-          if (scrollPercentage >= 28) {
+          if (scrollPercentage >= 25) {
             item3.classList.add('perks-item-active')
+          }
+
+          if (scrollPercentage < 25) {
+            item3.classList.add('opacity')
+            setTimeout(function() {
+              item3.classList.remove('perks-item-active');
+            }, 1000);
           } else {
-            item3.classList.remove('perks-item-active')
+            item3.classList.remove('opacity')
           }
     
           requestAnimationFrame(calculateScrollPercentage);
