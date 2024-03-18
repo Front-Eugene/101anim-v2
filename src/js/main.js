@@ -151,10 +151,19 @@
 // ДОБАВЛЕНИЕ КЛАССА В УСЛУГАХ
 
 function checkOverlap() {
-  const title1 = document.querySelector(".title-wrap-1");
-  const title2 = document.querySelector(".title-wrap-2");
-  const trigger1 = document.querySelector('.services-item-wrap-2');
-  const trigger2 = document.querySelector('.services-item-wrap-3');
+  // const title1 = document.querySelector(".title-wrap-1");
+  // const title2 = document.querySelector(".title-wrap-2");
+
+  const title1 = document.querySelector(".services-item-wrap-2");
+  const title2 = document.querySelector(".services-item-wrap-3");
+
+  const title3 = document.querySelector(".title-wrap-1");
+  const title4 = document.querySelector(".title-wrap-2");
+
+  const trigger1 = document.getElementById('trigger1');
+  const trigger2 = document.getElementById('trigger2');
+  // const trigger1 = document.querySelector('.services-item-wrap-2');
+  // const trigger2 = document.querySelector('.services-item-wrap-3');
 
   const rect1 = title1.getBoundingClientRect();
   const rect2 = title2.getBoundingClientRect();
@@ -166,16 +175,24 @@ function checkOverlap() {
     triggerRect1.left <= rect1.right &&
     triggerRect1.bottom >= rect1.top &&
     triggerRect1.top <= rect1.bottom
-  ) { title1.classList.add('overlap')
-  } else title1.classList.remove('overlap')
+  ) { title3.classList.add('overlap')
+      trigger1.style.height = 400 + 'px';
+  } else {
+    title3.classList.remove('overlap')
+    trigger1.style.height = 200 + 'px';
+  }
 
   if (
     triggerRect2.right >= rect2.left &&
     triggerRect2.left <= rect2.right &&
     triggerRect2.bottom >= rect2.top &&
     triggerRect2.top <= rect2.bottom
-  ) { title2.classList.add('overlap')
-  } else title2.classList.remove('overlap')
+  ) { title4.classList.add('overlap')
+      trigger2.style.height = 400 + 'px';
+  } else {
+    title4.classList.remove('overlap')
+    trigger2.style.height = 200 + 'px';
+  }
 }
 
 // Call the checkOverlap function whenever needed (e.g., on scroll, resize, etc.)
