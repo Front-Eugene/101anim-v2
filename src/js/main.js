@@ -60,6 +60,11 @@
         resizableElement.style.height = scrollPercentageFast + "%";
       }
 
+      // if (scrollPercentage >= 20) {
+      //   resizableElement.style.height = 66 + "%"
+      //   resizableElement.style.height = scrollPercentageFast + "%";
+      // }
+
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
       } else arrows.classList.remove('arrow-wrap-active')
@@ -92,11 +97,7 @@
             setTimeout(function() {
               item2.classList.remove('perks-item-active');
             }, 500);
-          } else {
-            item2.classList.remove('opacity')
           }
-
-
     
           if (scrollPercentage >= 20) {
             item3.classList.add('perks-item-active')
@@ -107,8 +108,6 @@
             setTimeout(function() {
               item3.classList.remove('perks-item-active');
             }, 500);
-          } else {
-            item3.classList.remove('opacity')
           }
     
           requestAnimationFrame(calculateScrollPercentage);
@@ -130,14 +129,16 @@
       let title1 = document.querySelector(".title-wrap-1");
       let title2 = document.querySelector(".title-wrap-2");
       
-      if (scrollPercentage >= 55) {
+      // if (scrollPercentage >= 52) {
+      if (scrollTop >= 3000) {
         title1.classList.add('overlap')
       } else {
         title1.classList.remove('overlap')
       }
 
-      // if (scrollPercentage >= 58) {
-      if (scrollPercentage >= 61) {
+
+      // if (scrollPercentage >= 59) {
+        if (scrollTop >= 3400) {
         title2.classList.add('overlap')
       } else {
         title2.classList.remove('overlap')
