@@ -635,7 +635,7 @@ nav {
             opacity: 0;
         }
 
-        50% {
+        80% {
             opacity: 0;
         }
 
@@ -647,7 +647,7 @@ nav {
     .perks-item-active p {
         color: #1C2818;
         z-index: 40;
-        animation: showtitle 1.3s;
+        animation: showtitle 1s;
     }
 
     .perks-item-1 {
