@@ -622,22 +622,32 @@ nav {
         color: #1C2818;
         opacity: 1;
         z-index: 30;
-        opacity: 1;
-        z-index: 30;
     }
 
     .perks-item-active h2 {
-        transition: 1s;
         color: #1C2818;
-        opacity: 1;
         z-index: 40;
+        animation: showtitle 1s;
+    }
+
+    @keyframes showtitle {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     .perks-item-active p {
-        transition: 3s;
         color: #1C2818;
-        opacity: 1;
         z-index: 40;
+        animation: showtitle 1.3s;
     }
 
     .perks-item-1 {
@@ -676,7 +686,7 @@ nav {
     }
 
     .opacity {
-        animation: change 1s;
+        animation: change .5s;
     }
 
     @keyframes change {
