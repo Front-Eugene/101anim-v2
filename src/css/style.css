@@ -552,7 +552,7 @@ nav {
         width: 100%;
         /* min-height: 300vh;*/
         min-height: 300vh;
-        /* min-height: 500vh; */
+        min-height: 600vh;
         position: sticky;
         top: 0;
         display: flex;
@@ -574,13 +574,6 @@ nav {
         z-index: 50;
     }
 
-    .perks-hide {
-        position: absolute;
-        width: 10px;
-        height: 100px;
-        margin: -200px 0 0 -62px;
-    }
-
     .perks-line {
         width: 3px;
         margin: 0 0 0 -1px;
@@ -592,10 +585,10 @@ nav {
 
     .perks-item {
         /* height: 100vh; */
-        height: 100vh;
+        height: 200vh;
         width: 100%;
         padding: 0 0 0 200px;
-        /* padding: 0 0 100vh 200px; */
+        padding: 0 0 100vh 200px;
         display: flex;
         flex-direction: column;
         justify-content: center;
