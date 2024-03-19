@@ -49,16 +49,17 @@
     window.addEventListener("scroll", function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       let scrollHeight = body.scrollHeight - window.innerHeight;
-      let incrementalFactor = 2; 
+      let incrementalFactor = 2.35; 
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
-      let scrollPercentageFast = (scrollTop / scrollHeight) * 100 * incrementalFactor;
+      let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
-
       resizableElement.style.height = 1 + "%";
 
       if (scrollPercentage >= 12) {
         resizableElement.style.height = scrollPercentageFast + "%";
       }
+
+      
 
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
