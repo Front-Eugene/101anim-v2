@@ -551,9 +551,8 @@ nav {
     .perks {
         width: 100%;
         /* min-height: 300vh;*/
-        min-height: 300vh;
-        min-height: 600vh;
-        min-height: 500vh;
+        /* min-height: 600vh; */
+        min-height: 450vh;
         position: sticky;
         top: 0;
         display: flex;
@@ -581,7 +580,8 @@ nav {
         min-height: 5px;
         transition: 0.3s ease;
         background: #1C2818;
-        transition: .5s;
+        /* transition: .5s; */
+        transition: .2s;
     }
 
     .perks-item {
