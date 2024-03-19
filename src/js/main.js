@@ -49,8 +49,8 @@
     window.addEventListener("scroll", function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       let scrollHeight = body.scrollHeight - window.innerHeight;
-      // let incrementalFactor = 3; 
-      let incrementalFactor = 2.35;
+      // let incrementalFactor = 2.35;
+      let incrementalFactor = 3; 
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
       let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
