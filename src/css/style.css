@@ -552,7 +552,7 @@ nav {
         width: 100%;
         /* min-height: 300vh;*/
         /* min-height: 600vh; */
-        min-height: 450vh;
+        min-height: 400vh;
         position: sticky;
         top: 0;
         display: flex;
