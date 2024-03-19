@@ -553,6 +553,7 @@ nav {
         /* min-height: 300vh;*/
         min-height: 300vh;
         min-height: 600vh;
+        min-height: 500vh;
         position: sticky;
         top: 0;
         display: flex;
@@ -675,6 +676,8 @@ nav {
     }
 
     .perks-item-3 {
+        height: 100vh;
+        padding: 0 0 0 200px;
         background: #EAEBE4;
     }
 
