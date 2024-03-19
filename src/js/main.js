@@ -49,21 +49,16 @@
     window.addEventListener("scroll", function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       let scrollHeight = body.scrollHeight - window.innerHeight;
-      let incrementalFactor = 3.1; 
+      let incrementalFactor = 2; 
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
       let scrollPercentageFast = (scrollTop / scrollHeight) * 100 * incrementalFactor;
       let arrows = document.querySelector('.arrow-wrap');
 
       resizableElement.style.height = 1 + "%";
 
-      if (scrollPercentage >= 10) {
+      if (scrollPercentage >= 12) {
         resizableElement.style.height = scrollPercentageFast + "%";
       }
-
-      // if (scrollPercentage >= 20) {
-      //   resizableElement.style.height = 66 + "%"
-      //   resizableElement.style.height = scrollPercentageFast + "%";
-      // }
 
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
@@ -85,25 +80,31 @@
           let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
           let scrollHeight = body.scrollHeight - window.innerHeight;
           let scrollPercentage = (scrollTop / scrollHeight) * 100;
+          let resizableElement = document.getElementById("resizable");
+          const currentHeight = parseInt(resizableElement.style.height, 10);
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
-          if (scrollPercentage >= 14) {
+          // if (scrollPercentage >= 14) {
+          if (currentHeight > 33) {
             item2.classList.add('perks-item-active')
           } 
 
-          if (scrollPercentage <= 14) {
+          // if (scrollPercentage <= 14) {
+          if (currentHeight < 33) {
             item2.classList.add('opacity')
             setTimeout(function() {
               item2.classList.remove('perks-item-active');
             }, 500);
           }
     
-          if (scrollPercentage >= 20) {
+          // if (scrollPercentage >= 20) {
+            if (currentHeight > 66) {
             item3.classList.add('perks-item-active')
           }
 
-          if (scrollPercentage <= 20) {
+          // if (scrollPercentage <= 20) {
+          if (currentHeight < 66) {
             item3.classList.add('opacity')
             setTimeout(function() {
               item3.classList.remove('perks-item-active');

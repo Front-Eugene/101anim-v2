@@ -551,6 +551,7 @@ nav {
     .perks {
         width: 100%;
         min-height: 300vh;
+        min-height: 600vh;
         position: sticky;
         top: 0;
         display: flex;
