@@ -567,8 +567,8 @@ nav {
         /* position: sticky; */
         position: absolute;
         z-index: 20;
-        top: 35vh;
-        /* transform: translateY(-50vh); */
+        top: 50vh;
+        transform: translateY(-50%);
         left: 143px;
         background: #BAC8BF;
         z-index: 50;
@@ -744,6 +744,7 @@ nav {
     } */
 
     .arrow-wrap-none {
+        opacity: 0;
         width: 70%;
     }
 

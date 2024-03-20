@@ -121,7 +121,7 @@ function checkInputValues() {
         inputValue.startsWith("8033") ||
         inputValue.startsWith("8029") ||
         inputValue.startsWith("8025");
-  
+
     if (startsWithCode) {
       // Remove the phone mask and limit the digits to 18
       var formattedValue = inputValue.replace(/\D/g, '').slice(0, 12);

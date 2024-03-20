@@ -92,9 +92,9 @@
         arrows.style.scale = "2";
       } else arrows.style.scale = "1";
 
-      // if (scrollPercentage >= 90) {
-      //   arrows.classList.add('arrow-wrap-none')
-      // } else arrows.classList.remove('arrow-wrap-none')
+      if (scrollPercentage >= 85.1) {
+        arrows.classList.add('arrow-wrap-none')
+      } else arrows.classList.remove('arrow-wrap-none')
     });
 
       document.addEventListener("DOMContentLoaded", function() {
