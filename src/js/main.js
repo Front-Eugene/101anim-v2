@@ -65,14 +65,32 @@
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
       } else arrows.classList.remove('arrow-wrap-active')
-      // 73
+
       if (scrollPercentage >= 67) {
         arrows.style.width = scrollPercentage + "%";
+        arrows.style.scale = "1";
+        console.timeLog(scrollPercentage)
       }
 
-      if (scrollPercentage > 85) {
-        arrows.style.scale = "1.3";
-      } else arrows.style.scale = "1";
+      if (scrollPercentage >= 68) {
+        arrows.style.scale = "1.05";
+      } 
+
+      if (scrollPercentage >= 70) {
+        arrows.style.scale = "1.10";
+      } 
+
+      if (scrollPercentage >= 75) {
+        arrows.style.scale = "1.15";
+      } 
+
+      if (scrollPercentage >= 80) {
+        arrows.style.scale = "1.2";
+      } 
+
+      if (scrollPercentage >= 85) {
+        arrows.style.scale = "1.25";
+      }
 
       // if (scrollPercentage >= 90) {
       //   arrows.classList.add('arrow-wrap-none')

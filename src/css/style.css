@@ -730,6 +730,10 @@ nav {
         transition: .5s;
     }
 
+    .arrow-width {
+        max-width: 60%;
+    }
+
     /* .arrow-wrap-active {
         opacity: 1;
     } */
