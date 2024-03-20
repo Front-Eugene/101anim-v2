@@ -716,7 +716,8 @@ nav {
     .arrow-wrap {
         position: sticky;
         width: 70%;
-        margin: 0 auto 200px auto;
+        /* margin: 0 auto 200px auto; */
+        margin: 0 auto 155px auto;
         padding: 100px 0 0 0;
         height: 20px;
         top: 50%;
@@ -725,13 +726,13 @@ nav {
         align-items: center;
         justify-content: space-between;
         z-index: 50;
-        opacity: 0;
+        /* opacity: 0; */
         transition: .5s;
     }
 
-    .arrow-wrap-active {
+    /* .arrow-wrap-active {
         opacity: 1;
-    }
+    } */
 
     .arrow-wrap-none {
         width: 70%;

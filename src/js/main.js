@@ -65,14 +65,18 @@
       if (scrollPercentage >= 67) {
         arrows.classList.add('arrow-wrap-active')
       } else arrows.classList.remove('arrow-wrap-active')
-
-      if (scrollPercentage >= 73) {
+      // 73
+      if (scrollPercentage >= 67) {
         arrows.style.width = scrollPercentage + "%";
       }
 
-      if (scrollPercentage >= 90) {
-        arrows.classList.add('arrow-wrap-none')
-      } else arrows.classList.remove('arrow-wrap-none')
+      if (scrollPercentage > 85) {
+        arrows.style.scale = "1.3";
+      } else arrows.style.scale = "1";
+
+      // if (scrollPercentage >= 90) {
+      //   arrows.classList.add('arrow-wrap-none')
+      // } else arrows.classList.remove('arrow-wrap-none')
     });
 
       document.addEventListener("DOMContentLoaded", function() {
