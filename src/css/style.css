@@ -597,6 +597,7 @@ nav {
         /* transition: 1s; */
 
         transition: opacity 1s, z-index 0.5s;
+        transition: opacity .5s, z-index 0.5s;
         opacity: 0;
         z-index: -1;
     }
@@ -634,6 +635,7 @@ nav {
         color: #1C2818;
         z-index: 40;
         animation: showtitle 1s;
+        animation: showtitle .8s;
     }
 
     @keyframes showtitle {
@@ -654,13 +656,16 @@ nav {
         color: #1C2818;
         z-index: 40;
         animation: showtitle 1s;
+        animation: showtitle .8s;
     }
 
     .perks-item-1 {
         background: #ffffff;
+        /* color: #1C2818;
         color: #1C2818;
         opacity: 1;
-        z-index: 30;
+        opacity: 0;
+        z-index: 30; */
     }
 
     .perks-item-1 h2 {

@@ -106,25 +106,36 @@
           let scrollPercentage = (scrollTop / scrollHeight) * 100;
           let resizableElement = document.getElementById("resizable");
           const currentHeight = parseInt(resizableElement.style.height, 10);
+          let item1 = document.querySelector('.perks-item-1');
           let item2 = document.querySelector('.perks-item-2');
           let item3 = document.querySelector('.perks-item-3');
     
           // if (scrollPercentage >= 14) {
+          if (currentHeight < 33) {
+            item1.classList.add('perks-item-active')
+          }   
+
           if (currentHeight > 33) {
             item2.classList.add('perks-item-active')
+            item1.classList.remove('perks-item-active')
           } 
 
           // if (scrollPercentage <= 14) {
           if (currentHeight < 33) {
             item2.classList.add('opacity')
-            setTimeout(function() {
-              item2.classList.remove('perks-item-active');
-            }, 500);
+            item2.classList.remove('perks-item-active');
+          }
+
+          if (currentHeight < 32) {
+            item2.classList.add('opacity')
           }
     
           // if (scrollPercentage >= 20) {
             if (currentHeight > 66) {
             item3.classList.add('perks-item-active')
+            setTimeout(function() {
+              item2.classList.remove('perks-item-active');
+            }, 500);
           }
 
           // if (scrollPercentage <= 20) {
