@@ -51,8 +51,10 @@
       let scrollHeight = body.scrollHeight - window.innerHeight;
       // let incrementalFactor = 2.35;
       let incrementalFactor = 3; 
+      let incrementalFactor1 = 1; 
       let scrollPercentage = (scrollTop / scrollHeight) * 100;
       let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
+      let scrollPercentageFast1 = (scrollTop / scrollHeight) * 100 * incrementalFactor1;
       let arrows = document.querySelector('.arrow-wrap');
       resizableElement.style.height = 1 + "%";
 
@@ -67,30 +69,30 @@
       } else arrows.classList.remove('arrow-wrap-active')
 
       if (scrollPercentage >= 67) {
-        arrows.style.width = scrollPercentage + "%";
-        arrows.style.scale = "1";
+        arrows.style.width = scrollPercentageFast1 + "%";
+        // arrows.style.scale = "1";
         console.timeLog(scrollPercentage)
       }
 
       if (scrollPercentage >= 68) {
-        arrows.style.scale = "1.05";
+        // arrows.style.scale = "1.05";
       } 
 
       if (scrollPercentage >= 70) {
-        arrows.style.scale = "1.10";
+        // arrows.style.scale = "1.10";
       } 
 
       if (scrollPercentage >= 75) {
-        arrows.style.scale = "1.15";
+        // arrows.style.scale = "1.15";
       } 
 
       if (scrollPercentage >= 80) {
-        arrows.style.scale = "1.2";
+        // arrows.style.scale = "1.2";
       } 
 
       if (scrollPercentage >= 85) {
-        arrows.style.scale = "1.25";
-      }
+        arrows.style.scale = "2";
+      } else arrows.style.scale = "1";
 
       // if (scrollPercentage >= 90) {
       //   arrows.classList.add('arrow-wrap-none')
