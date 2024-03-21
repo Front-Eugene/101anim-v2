@@ -171,7 +171,7 @@ function checkOverlap() {
       arrowsPosition.bottom >= TextPosition1.top &&
       arrowsPosition.top <= TextPosition1.bottom
     ) { arrows.classList.add('arrow-wrap-active')
-        arrows.style.minWidth = 70 + '%';
+        arrows.style.Width = 70 + '%';
       }
 
       if (
@@ -182,13 +182,11 @@ function checkOverlap() {
       ) { arrows.style.scale = '1.5';
           arrows.style.opacity = '0';
           setTimeout(function() {
-            arrows.classList.add('arrow-wrap-none');
+            arrows.style.scale = '1';
           }, 500);
 
         } else {
-          arrows.style.scale = '1'; 
           arrows.style.opacity = '1';
-          arrows.classList.remove('arrow-wrap-none');
         }
 
   // ARROWS
