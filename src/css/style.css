@@ -731,7 +731,7 @@ nav {
         align-items: center;
         justify-content: space-between;
         z-index: 50;
-        /* opacity: 0; */
+        opacity: 0;
         transition: .5s;
     }
 
@@ -739,9 +739,9 @@ nav {
         max-width: 60%;
     }
 
-    /* .arrow-wrap-active {
+    .arrow-wrap-active {
         opacity: 1;
-    } */
+    }
 
     .arrow-wrap-none {
         opacity: 0;
@@ -750,11 +750,8 @@ nav {
 
     .projects {
         width: 100%;
-        /* height: 100vh;
-        padding: 250px 0 0 0; */
         text-align: center;
         position: relative;
-        /* overflow: auto; */
         font-family: 'Rubik';
         font-weight: 100;
         color: #1C2818;
@@ -787,12 +784,8 @@ nav {
     }
 
     .scroll-content {
-        /* position: sticky;
-        top: 0;
-        margin: 0 0 300px 0; */
         margin: 0 0 -100px 0;
-        /* height: 100%;
-        overflow: auto; */
+        overflow: hidden;
     }
 
     .projects::-webkit-scrollbar {
