@@ -180,7 +180,16 @@ function checkOverlap() {
         arrowsPosition.bottom >= TextPosition2.top &&
         arrowsPosition.top <= TextPosition2.bottom
       ) { arrows.style.scale = '1.5';
-        } else arrows.style.scale = '1';
+          arrows.style.opacity = '0';
+          setTimeout(function() {
+            arrows.classList.add('arrow-wrap-none');
+          }, 500);
+
+        } else {
+          arrows.style.scale = '1'; 
+          arrows.style.opacity = '1';
+          arrows.classList.remove('arrow-wrap-none');
+        }
 
   // ARROWS
 
