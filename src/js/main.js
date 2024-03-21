@@ -166,14 +166,6 @@ function checkOverlap() {
     arrows.style.width = scrollPercentage + "%";
 
     if (
-      arrowsPosition.right >= TextPosition2.left &&
-      arrowsPosition.left <= TextPosition2.right &&
-      arrowsPosition.bottom >= TextPosition2.top &&
-      arrowsPosition.top <= TextPosition2.bottom
-    ) { arrows.style.scale = '1.5';
-      } else arrows.style.scale = '1';
-
-    if (
       arrowsPosition.right >= TextPosition1.left &&
       arrowsPosition.left <= TextPosition1.right &&
       arrowsPosition.bottom >= TextPosition1.top &&
@@ -181,6 +173,14 @@ function checkOverlap() {
     ) { arrows.classList.add('arrow-wrap-active')
         arrows.style.minWidth = 70 + '%';
       }
+
+      if (
+        arrowsPosition.right >= TextPosition2.left &&
+        arrowsPosition.left <= TextPosition2.right &&
+        arrowsPosition.bottom >= TextPosition2.top &&
+        arrowsPosition.top <= TextPosition2.bottom
+      ) { arrows.style.scale = '1.5';
+        } else arrows.style.scale = '1';
 
   // ARROWS
 
