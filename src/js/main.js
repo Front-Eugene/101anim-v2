@@ -174,8 +174,8 @@ function checkOverlap() {
         arrows.style.Width = 70 + '%';
       }
 
-      let arrowLeft = document.querySelector('.arrow-left');
-      let arrowRight = document.querySelector('.arrow-right');
+      // let arrowLeft = document.querySelector('.arrow-left');
+      // let arrowRight = document.querySelector('.arrow-right');
 
       if (
         arrowsPosition.right >= TextPosition2.left &&
@@ -183,16 +183,10 @@ function checkOverlap() {
         arrowsPosition.bottom >= TextPosition2.top &&
         arrowsPosition.top <= TextPosition2.bottom
       ) { 
-        arrowLeft.style.marginLeft = "-200px"; 
-        arrowRight.style.marginRight = "-200px";
+          arrows.style.scale = '1.5'
         } else {
-          arrowLeft.style.marginLeft = "0"; 
-          arrowRight.style.marginRight = "0";
+          arrows.style.scale = '1'
         }
-
-        // arrowLeft.classList.remove('arrow-left') 
-        // arrowRight.classList.remove('arrow-right') 
-
   // ARROWS
 
   if (
