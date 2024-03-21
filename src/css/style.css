@@ -721,6 +721,7 @@ nav {
     .arrow-wrap {
         position: sticky;
         width: 70%;
+        height: 10px;
         /* margin: 0 auto 200px auto; */
         margin: 0 auto 155px auto;
         padding: 100px 0 0 0;
@@ -728,6 +729,7 @@ nav {
         top: 50%;
         transform: translateY(-50%);
         display: flex;
+        overflow: hidden !important;
         align-items: center;
         justify-content: space-between;
         z-index: 50;
@@ -741,10 +743,6 @@ nav {
 
     .arrow-wrap-active {
         opacity: 1;
-    }
-
-    .arrow-wrap-none {
-        width: 0%;
     }
 
     .projects {
