@@ -19,17 +19,28 @@ agreeText.addEventListener('mouseout', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   let formItems = document.querySelectorAll('.form-item');
+  let formInputs = document.querySelectorAll('.form-item input');
   let formWrap = document.querySelector('.form-wrap');
 
   formItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      formItems.forEach(function(item) {
-        item.classList.remove('form-item-border');
-      });
-
-      this.classList.add('form-item-border');
-    });
+    const inputs = item.querySelector('input');
+    if(inputs){
+        inputs[0].addEventListener('focus',()=>{
+            formItems.forEach(function(item) {
+                item.classList.remove('form-item-border');
+            });
+            this.classList.add('form-item-border');
+        });
+    }else{
+        item.addEventListener('click', function() {
+            formItems.forEach(function(item) {
+                item.classList.remove('form-item-border');
+            });
+            this.classList.add('form-item-border');
+        });
+    }
   });
+
 
   document.addEventListener('click', function(e) {
     var target = e.target;
@@ -118,7 +129,7 @@ function checkInputValues() {
     });
   phoneInput.addEventListener('input', function() {
     let inputValue = this.value;
-    
+    alert(inputValue);
     // Check if the value starts with any of the specified phone codes
     let startsWithCode = inputValue.startsWith("375") || 
         inputValue.startsWith("+375") || 
