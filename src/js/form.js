@@ -154,7 +154,7 @@ function checkInputValues() {
             startsWithSEVEN = true;
         }
         if(startsWithSEVEN){
-            var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2})(.*)$/, '+$1 ($2) $3-$4-$5$6');
+            var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2,9})$/, '+$1 ($2) $3-$4-$5$6');
         }else{
             var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{1})(\d{2})(\d{2})(\d{2})$/, '+$1 ($2) $3 $4-$5$6');
         }
