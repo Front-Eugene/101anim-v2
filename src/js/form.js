@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formItems.forEach(function(item) {
                 item.classList.remove('form-item-border');
             });
-            current.add('form-item-border');
+            current.classList.add('form-item-border');
         });
     }else{
         item.addEventListener('click', function() {
