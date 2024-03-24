@@ -148,7 +148,7 @@ function checkInputValues() {
       var formattedValue = inputValue.replace(/\D/g, '').slice(0, 12);
     } else {
       // Remove consecutive plus signs and format the phone code and phone number
-      var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})$/, '+$1 ($2) $3-$4-$5-$6');
+      var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2})$/, '+$1 ($2) $3-$4-$5');
     }
   
     // Truncate additional characters if the number of digits is greater than or equal to 18
