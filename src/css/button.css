@@ -70,9 +70,9 @@ button:hover {
     --shadow: var(--shadow-hover);
 }
 
-button div {
+/* button div {
     height: 15px;
-}
+} */
 
 button div span {
     transition: .7s;
