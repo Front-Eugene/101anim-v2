@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
   let formWrap = document.querySelector('.form-wrap');
 
   formItems.forEach(function(item) {
-    const inputs = item.querySelector('input');
-    if(inputs){
-        inputs[0].addEventListener('focus',()=>{
+    const input = item.querySelector('input');
+    if(input){
+        input.addEventListener('focus',()=>{
             formItems.forEach(function(item) {
                 item.classList.remove('form-item-border');
             });
