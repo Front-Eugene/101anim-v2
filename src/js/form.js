@@ -19,7 +19,7 @@ agreeText.addEventListener('mouseout', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   let formItems = document.querySelectorAll('.form-item');
-  let formInputs = document.querySelectorAll('.form-item input');
+  let formInputs = document.querySelectorAll('.form-item input ');
   let formWrap = document.querySelector('.form-wrap');
 
   formItems.forEach(function(item) {
