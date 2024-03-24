@@ -138,11 +138,11 @@ function checkInputValues() {
         inputValue.startsWith("8029") ||
         inputValue.startsWith("8025");
     // Check if the value starts with any of the specified phone codes
-    // let startsWithNINE = inputValue.startsWith("9");
-    //   if (startsWithNINE) {
-    //       // Remove the phone mask and limit the digits to 18
-    //       var formattedValue = "+7 "+inputValue;
-    //   }
+    let startsWithNINE = inputValue.startsWith("9");
+      if (startsWithNINE) {
+          // Remove the phone mask and limit the digits to 18
+          var formattedValue = "+7 "+inputValue;
+      }
     if (startsWithCode) {
       // Remove the phone mask and limit the digits to 18
       var formattedValue = inputValue.replace(/\D/g, '').slice(0, 12);
