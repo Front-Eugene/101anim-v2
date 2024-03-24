@@ -111,6 +111,11 @@ function checkInputValues() {
 
   let phoneInput = document.getElementById('phone');
 
+    phoneInput.addEventListener('keydown', function(event) {
+        if (event.key.match(/[a-zа-я]/i) && event.key !== 'Backspace') {
+            event.preventDefault(); // Prevent typing any letters except Backspace
+        }
+    });
   phoneInput.addEventListener('input', function() {
     let inputValue = this.value;
     
@@ -134,12 +139,6 @@ function checkInputValues() {
     if (formattedValue.length >= 18) {
       formattedValue = formattedValue.slice(0, 18);
     }
-
-    phoneInput.addEventListener('keydown', function(event) {
-      if (event.key.match(/[a-zа-я]/i) && event.key !== 'Backspace') {
-        event.preventDefault(); // Prevent typing any letters except Backspace
-      }
-    });
   
     // Update the input value with the formatted value
     this.value = formattedValue;
