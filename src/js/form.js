@@ -172,6 +172,7 @@ function checkInputValues() {
       let errorPhone = document.querySelector(".error-phone");
       let errorMail = document.querySelector(".error-mail");
       let errorAgree = document.querySelector(".error-agree");
+      let errorList = document.querySelector(".error-list");
   
       let btnName = document.querySelector(".placeholder-name");
       let btnMail = document.querySelector(".placeholder-mail");
@@ -196,6 +197,14 @@ function checkInputValues() {
         errorAgree.classList.remove('error-item-active');
         formAgree.classList.remove('form-rerror-active');
       });
+
+      if (  !errorName.classList.contains('error-item-active') &&
+          !errorMail.classList.contains('error-item-active') &&
+          !errorPhone.classList.contains('error-item-active')
+        ) {
+          errorList.style.margin = '30px 0 22px -1px';
+        }
+      
   
       // Validate form fields
       let isValid = true;
@@ -208,9 +217,10 @@ function checkInputValues() {
           // document.getElementById("nameError").textContent = "Name is required";
           isValid = false;
           errorName.classList.add('error-item-active');
+          errorList.classList.add('list-margin');
           formName.classList.add('form-rerror-active');
           btnName.classList.remove('btn-ok');
-      }
+      } else errorList.classList.remove('list-margin');
   
       let russianLettersRegex = /[а-яА-Я]/;
       let atSymbolRegex = /@/;
@@ -225,20 +235,21 @@ function checkInputValues() {
             formMail.classList.add("form-rerror-active");
           }
           isValid = false;
+          errorList.classList.add('list-margin');
           errorMail.classList.add('error-item-active');
           formMail.classList.add('form-rerror-active');
           btnMail.classList.remove('btn-ok');
-  
-      }
+      } else errorList.classList.remove('list-margin');
   
       // Validate phone
       if (phone === "") {
           // document.getElementById("phoneError").textContent = "Phone number is required";
           isValid = false;
+          errorList.classList.add('list-margin');
           errorPhone.classList.add('error-item-active');
           formPhone.classList.add('form-rerror-active');
           btnPhone.classList.remove('btn-ok');
-      }
+      } else errorList.classList.remove('list-margin');
   
       // Validate agreement
 
@@ -252,10 +263,11 @@ function checkInputValues() {
 
       if (!agree) {
         isValid = false;
+        errorList.classList.add('list-margin');
         agreeText.classList.add('agree-text-error');
         agrees.classList.add('checked-error');
         errorAgree.classList.add('error-item-active');
-      } 
+      } else errorList.classList.remove('list-margin');
   
       // If form is valid, submit the form
       if (isValid) {
