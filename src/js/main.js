@@ -161,9 +161,10 @@ function checkOverlap() {
 
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollHeight = body.scrollHeight - window.innerHeight;    
-    let scrollPercentage = ((scrollTop + 250) / scrollHeight) * 100;
+    let scrollPercentage = ((scrollTop + 250) / scrollHeight) * 100 - 45 ;
 
-    arrows.style.width = "45rem";
+    arrows.style.minWidth = "45rem";
+    arrows.style.width = scrollPercentage+"%";
 
     if (
       arrowsPosition.right >= TextPosition1.left &&
