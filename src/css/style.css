@@ -722,28 +722,24 @@ nav {
 
     .arrow-wrap {
         position: sticky;
-        width: 70%;
+        width: 45rem;
         /* margin: 0 auto 200px auto; */
         margin: 0 auto 155px auto;
         padding: 100px 0 0 0;
         height: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 30vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
         z-index: 50;
-        opacity: 0;
-        transition: .5s;
+        opacity: 1;
+        transition: .1s;
     }
 
     .arrow-width {
         max-width: 60%;
     }
 
-    .arrow-wrap-active {
-        opacity: 1;
-    }
 
     .projects {
         width: 100%;

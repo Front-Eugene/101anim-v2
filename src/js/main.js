@@ -163,7 +163,7 @@ function checkOverlap() {
     let scrollHeight = body.scrollHeight - window.innerHeight;    
     let scrollPercentage = ((scrollTop + 250) / scrollHeight) * 100;
 
-    arrows.style.width = scrollPercentage + "%";
+    arrows.style.width = "45rem";
 
     if (
       arrowsPosition.right >= TextPosition1.left &&
@@ -184,8 +184,10 @@ function checkOverlap() {
         arrowsPosition.top <= TextPosition2.bottom
       ) { 
           arrows.style.scale = '1.5'
+          arrows.style.opacity = '0'
         } else {
           arrows.style.scale = '1'
+        arrows.style.opacity = '1'
         }
   // ARROWS
 
