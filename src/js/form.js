@@ -150,7 +150,7 @@ function checkInputValues() {
         let startsWithSEVEN = inputValue.startsWith("7");
         let startsWithPLSEVEN = formattedValue.startsWith("+7");
         if(startsWithPLSEVEN){
-            inputValue = formattedValue;
+            inputValue = formattedValue.replaceAll("+",'').replaceAll(" ",'');
             startsWithSEVEN = true;
         }
         if(startsWithSEVEN){
