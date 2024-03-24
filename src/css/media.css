@@ -717,8 +717,8 @@
         position: absolute;
         width: calc(100% + 1px);
         height: 52px;
-        padding-left: calc(35% + 0.5px);
-        padding-right: calc(35% + 0.5px);
+        padding-left: calc(36% + 0.5px);
+        padding-right: calc(36% + 0.5px);
         margin: 88px 0 0 -15px;
     }
 
