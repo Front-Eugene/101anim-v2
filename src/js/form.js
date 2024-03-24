@@ -23,13 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
   let formWrap = document.querySelector('.form-wrap');
 
   formItems.forEach(function(item) {
+    const current = item;
     const input = item.querySelector('input');
     if(input){
         input.addEventListener('focus',()=>{
             formItems.forEach(function(item) {
                 item.classList.remove('form-item-border');
             });
-            this.classList.add('form-item-border');
+            current.add('form-item-border');
         });
     }else{
         item.addEventListener('click', function() {
