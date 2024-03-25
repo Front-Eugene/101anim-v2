@@ -145,8 +145,8 @@ function checkInputValues() {
       }
     if (startsWithCode) {
       // Remove the phone mask and limit the digits to 18
-      var formattedValue = inputValue.replace(/\D/g, '').slice(0, 12);
-      var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{3})(\d{2})(\d{2,9})$/, '+$1 ($2) $3-$4-$5');
+      var formattedValue = inputValue.replace(/\D/g, '');
+      var formattedValue = formattedValue.replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{3})(\d{2})(\d{1,9})$/, '+$1 ($2) $3-$4-$5');
     } else {
         let startsWithSEVEN = inputValue.startsWith("7");
         let startsWithPLSEVEN = formattedValue.startsWith("+7");
@@ -163,8 +163,8 @@ function checkInputValues() {
     }
   
     // Truncate additional characters if the number of digits is greater than or equal to 18
-    if (formattedValue.length >= 18) {
-      formattedValue = formattedValue.slice(0, 18);
+    if (formattedValue.length >= 25) {
+      formattedValue = formattedValue.slice(0, 25);
     }
   
     // Update the input value with the formatted value
