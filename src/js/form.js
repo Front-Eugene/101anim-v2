@@ -42,11 +42,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   let formItems = document.querySelectorAll('.form-green-active');
+
+//   formItems.forEach(function(item) {
+//     item.addEventListener('click', function() {
+//       let formItem = this.closest('.form-item');
+
+//       formItems.forEach(function(item) {
+//         item.closest('.form-item').classList.remove('form-item-border');
+//       });
+
+//       formItem.classList.add('form-item-border');
+//     });
+//   });
+
+//   document.addEventListener('click', function(e) {
+//     var target = e.target;
+
+//     if (!target.closest('.form-wrap')) {
+//       formItems.forEach(function(item) {
+//         item.closest('.form-item').classList.remove('form-item-border');
+//       });
+//     }
+//   });
+// });
+
+
 document.addEventListener('DOMContentLoaded', function() {
   let formItems = document.querySelectorAll('.form-green-active');
 
   formItems.forEach(function(item) {
-    item.addEventListener('click', function() {
+    item.addEventListener('focus', function() {
       let formItem = this.closest('.form-item');
 
       formItems.forEach(function(item) {
@@ -55,19 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       formItem.classList.add('form-item-border');
     });
-  });
 
-  document.addEventListener('click', function(e) {
-    var target = e.target;
-
-    if (!target.closest('.form-wrap')) {
-      formItems.forEach(function(item) {
-        item.closest('.form-item').classList.remove('form-item-border');
-      });
-    }
+    item.addEventListener('blur', function() {
+      let formItem = this.closest('.form-item');
+      formItem.classList.remove('form-item-border');
+    });
   });
 });
-
 // ВАЛИДАЦИЯ ОБВОДКИ АКТИВНОЙ
 
 
