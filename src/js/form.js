@@ -198,12 +198,32 @@ function checkInputValues() {
         formAgree.classList.remove('form-rerror-active');
       });
 
-      if (  !errorName.classList.contains('error-item-active') &&
+      // if (  !errorName.classList.contains('error-item-active') &&
+      //   !errorMail.classList.contains('error-item-active') &&
+      //   !errorPhone.classList.contains('error-item-active')
+      //   ) {
+      //     errorList.classList.remove('list-margin')
+      //   } else errorList.classList.add('list-margin')
+
+      function updateErrorListMargin() {
+      
+        if (
+          !errorName.classList.contains('error-item-active') &&
           !errorMail.classList.contains('error-item-active') &&
           !errorPhone.classList.contains('error-item-active')
         ) {
-          errorList.style.margin = '30px 0 22px -1px';
+          console.log('Removing list-margin class');
+          errorList.classList.remove('list-margin');
+        } else {
+          errorList.classList.add('list-margin');
         }
+      }
+        
+        updateErrorListMargin();
+
+        // errorName.addEventListener('input', updateErrorListMargin);
+        // errorMail.addEventListener('input', updateErrorListMargin);
+        // errorPhone.addEventListener('input', updateErrorListMargin);
       
   
       // Validate form fields
