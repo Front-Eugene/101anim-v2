@@ -146,6 +146,7 @@ function checkOverlap() {
   const triggerRect1 = trigger1.getBoundingClientRect();
   const triggerRect2 = trigger2.getBoundingClientRect();
 
+  const PageY = (elem) => window.pageYOffset + elem.getBoundingClientRect().top
 
   // ARROWS
 
@@ -158,13 +159,11 @@ function checkOverlap() {
     const TextPosition1 = trigText1.getBoundingClientRect();
     const TextPosition2 = trigText2.getBoundingClientRect();
 
+    let scrollPercentage =  ((document.documentElement.scrollTop - PageY(trigText1))/(PageY(trigText2)- PageY(trigText1))+.5)*100;
 
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    let scrollHeight = body.scrollHeight - window.innerHeight;    
-    let scrollPercentage = ((scrollTop + 250) / scrollHeight) * 100 - 45 ;
+    arrows.style.minWidth = "53rem";
 
-    arrows.style.minWidth = "45rem";
-    arrows.style.width = scrollPercentage+"%";
+    arrows.style.width = `calc(53rem + ${scrollPercentage} * 5px)`;
 
     if (
       arrowsPosition.right >= TextPosition1.left &&

@@ -722,10 +722,10 @@ nav {
 
     .arrow-wrap {
         position: sticky;
-        width: 45rem;
+        width: 53rem;
         /* margin: 0 auto 200px auto; */
-        margin: 0 auto 155px auto;
-        padding: 100px 0 0 0;
+        margin: 0 auto 159px auto;
+        padding: 96px 0 0 0;
         height: 20px;
         top: 30vh;
         display: flex;
