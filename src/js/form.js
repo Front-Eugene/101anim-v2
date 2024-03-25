@@ -144,9 +144,7 @@ function checkInputValues() {
           var formattedValue = "+7 "+inputValue;
       }
     if (startsWithCode) {
-      // Remove the phone mask and limit the digits to 18
-      var formattedValue = inputValue.replace(/\D/g, '');
-      var formattedValue = formattedValue.replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{3})(\d{2})(\d{1,9})$/, '+$1 ($2) $3-$4-$5');
+      var formattedValue = inputValue.replace(/\D/g, '').replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{3})(\d{2})(\d{1,9})$/, '+$1 ($2) $3-$4-$5');
     } else {
         let startsWithSEVEN = inputValue.startsWith("7");
         let startsWithPLSEVEN = formattedValue.startsWith("+7");
