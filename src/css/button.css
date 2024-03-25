@@ -22,6 +22,10 @@ button {
 button div {
     display: flex;
     overflow: hidden;
+    text-shadow: 0 var(--font-shadow) 0 #00000000;
+}
+
+button:hover div {
     text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
 button div span {
@@ -68,6 +72,7 @@ button div span:nth-child(11) {
 button:hover {
     --y: var(--move-hover);
     --shadow: var(--shadow-hover);
+    color: #fff
 }
 
 /* button div {
