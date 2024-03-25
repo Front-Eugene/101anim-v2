@@ -1072,6 +1072,7 @@ nav {
     .politics-wrap {
         position: relative;
         padding: 190px 0 0 48px;
+        padding: 190px 0 0 0;
     }
 
     .politics-wrap h1 {
