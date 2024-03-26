@@ -19,17 +19,29 @@ agreeText.addEventListener('mouseout', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   let formItems = document.querySelectorAll('.form-item');
+  let formInputs = document.querySelectorAll('.form-item input ');
   let formWrap = document.querySelector('.form-wrap');
 
   formItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      formItems.forEach(function(item) {
-        item.classList.remove('form-item-border');
-      });
-
-      this.classList.add('form-item-border');
-    });
+    const current = item;
+    const input = item.querySelector('input');
+    if(input){
+        input.addEventListener('focus',()=>{
+            formItems.forEach(function(item) {
+                item.classList.remove('form-item-border');
+            });
+            current.classList.add('form-item-border');
+        });
+    }else{
+        item.addEventListener('click', function() {
+            formItems.forEach(function(item) {
+                item.classList.remove('form-item-border');
+            });
+            this.classList.add('form-item-border');
+        });
+    }
   });
+
 
   document.addEventListener('click', function(e) {
     var target = e.target;
@@ -132,9 +144,13 @@ function checkInputValues() {
 
   let phoneInput = document.getElementById('phone');
 
+    phoneInput.addEventListener('keydown', function(event) {
+        if (event.key.match(/[a-zа-я]/i) && event.key !== 'Backspace') {
+            event.preventDefault(); // Prevent typing any letters except Backspace
+        }
+    });
   phoneInput.addEventListener('input', function() {
     let inputValue = this.value;
-    
     // Check if the value starts with any of the specified phone codes
     let startsWithCode = inputValue.startsWith("375") || 
         inputValue.startsWith("+375") || 
@@ -142,25 +158,33 @@ function checkInputValues() {
         inputValue.startsWith("8033") ||
         inputValue.startsWith("8029") ||
         inputValue.startsWith("8025");
-
+    // Check if the value starts with any of the specified phone codes
+    let startsWithNINE = inputValue.startsWith("9");
+      if (startsWithNINE) {
+          // Remove the phone mask and limit the digits to 18
+          var formattedValue = "+7 "+inputValue;
+      }
     if (startsWithCode) {
-      // Remove the phone mask and limit the digits to 18
-      var formattedValue = inputValue.replace(/\D/g, '').slice(0, 12);
+      var formattedValue = inputValue.replace(/\D/g, '').replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{3})(\d{2})(\d{1,9})$/, '+$1 ($2) $3-$4-$5');
     } else {
+        let startsWithSEVEN = inputValue.startsWith("7");
+        let startsWithPLSEVEN = formattedValue.startsWith("+7");
+        if(startsWithPLSEVEN){
+            inputValue = formattedValue.replaceAll("+",'').replaceAll(" ",'');
+            startsWithSEVEN = true;
+        }
+        if(startsWithSEVEN){
+            var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2,9})$/, '+$1 ($2) $3-$4-$5');
+        }else{
+            var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d{3})(\d{2})(\d{1})(\d{2})(\d{2})(\d{2})$/, '+$1 ($2) $3 $4-$5$6');
+        }
       // Remove consecutive plus signs and format the phone code and phone number
-      var formattedValue = inputValue.replace(/\++/g, '+').replace(/^(\+?\d)(\d{3})(\d{3})(\d{2})(\d{2})(\d{2})$/, '+$1 ($2) $3-$4-$5-$6');
     }
   
     // Truncate additional characters if the number of digits is greater than or equal to 18
-    if (formattedValue.length >= 18) {
-      formattedValue = formattedValue.slice(0, 18);
+    if (formattedValue.length >= 25) {
+      formattedValue = formattedValue.slice(0, 25);
     }
-
-    phoneInput.addEventListener('keydown', function(event) {
-      if (event.key.match(/[a-zа-я]/i) && event.key !== 'Backspace') {
-        event.preventDefault(); // Prevent typing any letters except Backspace
-      }
-    });
   
     // Update the input value with the formatted value
     this.value = formattedValue;
