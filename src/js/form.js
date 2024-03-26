@@ -54,11 +54,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   let formItems = document.querySelectorAll('.form-green-active');
+
+//   formItems.forEach(function(item) {
+//     item.addEventListener('click', function() {
+//       let formItem = this.closest('.form-item');
+
+//       formItems.forEach(function(item) {
+//         item.closest('.form-item').classList.remove('form-item-border');
+//       });
+
+//       formItem.classList.add('form-item-border');
+//     });
+//   });
+
+//   document.addEventListener('click', function(e) {
+//     var target = e.target;
+
+//     if (!target.closest('.form-wrap')) {
+//       formItems.forEach(function(item) {
+//         item.closest('.form-item').classList.remove('form-item-border');
+//       });
+//     }
+//   });
+// });
+
+
 document.addEventListener('DOMContentLoaded', function() {
   let formItems = document.querySelectorAll('.form-green-active');
 
   formItems.forEach(function(item) {
-    item.addEventListener('click', function() {
+    item.addEventListener('focus', function() {
       let formItem = this.closest('.form-item');
 
       formItems.forEach(function(item) {
@@ -67,19 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       formItem.classList.add('form-item-border');
     });
-  });
 
-  document.addEventListener('click', function(e) {
-    var target = e.target;
-
-    if (!target.closest('.form-wrap')) {
-      formItems.forEach(function(item) {
-        item.closest('.form-item').classList.remove('form-item-border');
-      });
-    }
+    item.addEventListener('blur', function() {
+      let formItem = this.closest('.form-item');
+      formItem.classList.remove('form-item-border');
+    });
   });
 });
-
 // ВАЛИДАЦИЯ ОБВОДКИ АКТИВНОЙ
 
 
@@ -196,6 +217,7 @@ function checkInputValues() {
       let errorPhone = document.querySelector(".error-phone");
       let errorMail = document.querySelector(".error-mail");
       let errorAgree = document.querySelector(".error-agree");
+      let errorList = document.querySelector(".error-list");
   
       let btnName = document.querySelector(".placeholder-name");
       let btnMail = document.querySelector(".placeholder-mail");
@@ -220,6 +242,28 @@ function checkInputValues() {
         errorAgree.classList.remove('error-item-active');
         formAgree.classList.remove('form-rerror-active');
       });
+
+
+      function updateErrorListMargin() {
+      
+        if (
+          !errorName.classList.contains('error-item-active') &&
+          !errorMail.classList.contains('error-item-active') &&
+          !errorPhone.classList.contains('error-item-active') &&
+          !errorAgree.classList.contains('error-item-active')
+        ) {
+          errorList.classList.remove('list-margin');
+        } else {
+          errorList.classList.add('list-margin');
+        }
+      }
+      setInterval(updateErrorListMargin, 500)
+      updateErrorListMargin();
+
+      // errorName.addEventListener('input', updateErrorListMargin);
+      // errorMail.addEventListener('input', updateErrorListMargin);
+      // errorPhone.addEventListener('input', updateErrorListMargin);
+      
   
       // Validate form fields
       let isValid = true;
@@ -232,9 +276,10 @@ function checkInputValues() {
           // document.getElementById("nameError").textContent = "Name is required";
           isValid = false;
           errorName.classList.add('error-item-active');
+          errorList.classList.add('list-margin');
           formName.classList.add('form-rerror-active');
           btnName.classList.remove('btn-ok');
-      }
+      } else errorList.classList.remove('list-margin');
   
       let russianLettersRegex = /[а-яА-Я]/;
       let atSymbolRegex = /@/;
@@ -249,20 +294,21 @@ function checkInputValues() {
             formMail.classList.add("form-rerror-active");
           }
           isValid = false;
+          errorList.classList.add('list-margin');
           errorMail.classList.add('error-item-active');
           formMail.classList.add('form-rerror-active');
           btnMail.classList.remove('btn-ok');
-  
-      }
+      } else errorList.classList.remove('list-margin');
   
       // Validate phone
       if (phone === "") {
           // document.getElementById("phoneError").textContent = "Phone number is required";
           isValid = false;
+          errorList.classList.add('list-margin');
           errorPhone.classList.add('error-item-active');
           formPhone.classList.add('form-rerror-active');
           btnPhone.classList.remove('btn-ok');
-      }
+      } else errorList.classList.remove('list-margin');
   
       // Validate agreement
 
@@ -276,10 +322,11 @@ function checkInputValues() {
 
       if (!agree) {
         isValid = false;
+        errorList.classList.add('list-margin');
         agreeText.classList.add('agree-text-error');
         agrees.classList.add('checked-error');
         errorAgree.classList.add('error-item-active');
-      } 
+      } else errorList.classList.remove('list-margin');
   
       // If form is valid, submit the form
       if (isValid) {
