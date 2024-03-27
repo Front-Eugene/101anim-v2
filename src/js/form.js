@@ -197,7 +197,6 @@ function checkInputValues() {
   
       // Clear previous error messages
       clearErrors();
-  
       // Get form values
       let name = document.getElementById("name").value.trim();
       let email = document.getElementById("email").value.trim();
@@ -345,6 +344,14 @@ function checkInputValues() {
             footerMobile.classList.add('footer-hidden-active')
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
+          fetch('https://100-1.tech/form', {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({email: email, name: name, phone:phone})
+          })
           document.getElementById("contactForm").reset();
       }
   }
