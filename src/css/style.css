@@ -721,28 +721,25 @@ nav {
 
     .arrow-wrap {
         position: sticky;
-        width: 70%;
+        width: 53rem;
         /* margin: 0 auto 200px auto; */
-        margin: 0 auto 155px auto;
-        padding: 100px 0 0 0;
+        margin: 0 auto 159px auto;
+        padding: 96px 0 0 0;
         height: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 30vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
         z-index: 50;
-        opacity: 0;
-        transition: .5s;
+        opacity: 1;
+
+        transition: .5s ease;
     }
 
     .arrow-width {
         max-width: 60%;
     }
 
-    .arrow-wrap-active {
-        opacity: 1;
-    }
 
     .projects {
         width: 100%;
@@ -1287,23 +1284,6 @@ nav {
         color: #BF2845;
     }
 
-    .form-border {
-        width: 100%; 
-        height: 100%;
-        display: flex;
-        flex-direction: column; 
-        padding: 0 0 0 20px;
-    }
-
-    .label-wrap {
-        padding: 19px 0 0 0;
-        display: flex;
-        font-size: 14px;
-        font-family: 'Rubik';
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
     /* TUT */
     /* .label-wrap {
         height: 100%;
@@ -1557,15 +1537,36 @@ nav {
     }
 
     .form-item input {
+        height: 100%;
         width: 99.9%;
         border: none;
-        margin: 8px 0px 0 -1px;
+        padding: 28px 0 0 20px;
+        margin: 0;
+        background: transparent;
         font-family: 'TildaSansMedium';
         font-size: 16px;
         line-height: 19.2px;
         color: #1C2818;
     }
 
+
+    .form-border {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .label-wrap {
+        position: absolute;
+        padding: 19px 0 8px 20px;
+        display: flex;
+        font-size: 14px;
+        font-family: 'Rubik';
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
     /* TUT */
     /* .form-item input {
         width: 99.9%;

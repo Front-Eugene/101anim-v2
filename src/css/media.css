@@ -618,12 +618,12 @@
     }
 
     .label-wrap {
-        padding: 20px 0 0 0;
+        padding: 20px 0 0 20px;
     }
 
     .form-item input {
         width: 99.8%;
-        /* margin: 10px 0 0px 0; */
+        padding: 10px 0 0px 0;
     }
     /* TUT */
 
