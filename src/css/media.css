@@ -1,9 +1,10 @@
 /* @media screen and (max-width: 375px) { */
-.burgrer-menu{
+.burgrer-menu, .m-hidden{
     display: none;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1000px) {
-    .burgrer-menu{
+    .burgrer-menu, .m-hidden{
         display: block;
     }
     .burgrer-menu .cross{
@@ -637,7 +638,7 @@
 
     .form-item input {
         width: 99.8%;
-        padding: 10px 0 0 20px;
+        padding: 27px 0 0 20px;
     }
     /* TUT */
 
