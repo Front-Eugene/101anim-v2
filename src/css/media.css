@@ -25,7 +25,6 @@
 
     .burgrer-wrap {
         height: 223px;
-        position: absolute;
         position: fixed;
         bottom: 5dvh;
         right: 28px;
@@ -103,7 +102,7 @@
             align-items: center;
             justify-content: space-around;
             position: fixed;
-            bottom: 36px;
+            bottom: 5dvh;
             right: 28px;
             border: 1px solid #D3E1E1;
             background: #fff;
