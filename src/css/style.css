@@ -42,6 +42,9 @@ html {
     scroll-behavior: smooth;
 }
 
+.burgrer-menu {
+    display: none;
+}
 
 .burgrer {
     display: none;
