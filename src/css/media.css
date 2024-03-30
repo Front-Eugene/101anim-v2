@@ -34,19 +34,11 @@
         width: 0;
         height: 0;
     }
-    .burgrer-menu {
-        padding-bottom: env(safe-area-inset-bottom);
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        z-index: 100;
-    }
 
     .burgrer-wrap {
         height: 223px;
         position: fixed;
+        z-index: 40;
         top: calc(90vh - 246px);
         right: 28px;
     }
@@ -123,6 +115,7 @@
             align-items: center;
             justify-content: center;
             position: fixed;
+            z-index: 40;
             top: calc(90vh - 76px);
             right: 28px;
             border: 1px solid #D3E1E1;
