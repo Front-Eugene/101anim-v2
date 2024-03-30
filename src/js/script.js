@@ -9,22 +9,9 @@ window.addEventListener('scroll', function () {
 // МОБИЛЬНОЕ МЕНЮ
 
 let burgerMenu = document.querySelector(".burgrer-menu");
-let burgerBtnOpen = document.querySelector(".burgrer-menu-btn");
-let burgerBtnClose = document.querySelector(".close-btn");
-
-burgerBtnOpen.addEventListener("click", function() {
-  burgerMenu.classList.toggle("burgrer-menu-active");
-  burgerBtnOpen.classList.remove("burgrer-menu-btn-active");
-});
 
 burgerMenu.addEventListener("click", function() {
-  burgerMenu.classList.remove("burgrer-menu-active");
-  burgerBtnOpen.classList.add("burgrer-menu-btn-active");
-});
-
-burgerBtnClose.addEventListener("click", function() {
-  burgerMenu.classList.remove("burgrer-menu-active");
-  burgerBtnOpen.classList.add("burgrer-menu-btn-active");
+    burgerMenu.classList.toggle("burgrer-menu-active");
 });
 
 // МОБИЛЬНОЕ МЕНЮ
