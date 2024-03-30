@@ -384,6 +384,8 @@
     }
 
     .projects {
+        max-width: 100vw;
+        overflow: hidden;
         width: 100%;
         height: auto;
         padding: 148px 0;
@@ -629,7 +631,7 @@
 
     .form-item input {
         width: 99.8%;
-        padding: 10px 0 0px 0;
+        padding: 10px 0 0 20px;
     }
     /* TUT */
 

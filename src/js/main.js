@@ -172,6 +172,7 @@ function checkOverlap() {
 
     arrows.style.minWidth = "53rem";
 
+
     arrows.style.width = `calc(53rem + ${scrollPercentage} * 5px)`;
 
     if (
@@ -190,7 +191,7 @@ function checkOverlap() {
         arrowsPosition.right >= TextPosition2.left &&
         arrowsPosition.left <= TextPosition2.right &&
         arrowsPosition.bottom >= TextPosition2.top &&
-        arrowsPosition.top <= TextPosition2.bottom
+        arrowsPosition.top <= TextPosition2.bottom || scrollPercentage > 110
       ) { 
           arrows.style.scale = '1.5'
           arrows.style.opacity = '0'

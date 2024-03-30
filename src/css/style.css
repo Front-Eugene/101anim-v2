@@ -531,7 +531,7 @@ nav {
 }
 
 .marquee {
-    animation: scroll 20s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 @keyframes scroll {
@@ -721,9 +721,8 @@ nav {
     .arrow-wrap {
         position: sticky;
         width: 53rem;
-        /* margin: 0 auto 200px auto; */
-        margin: 0 auto 159px auto;
         padding: 96px 0 0 0;
+        margin: 0 auto -26px auto;
         height: 20px;
         top: 30vh;
         display: flex;
@@ -751,8 +750,6 @@ nav {
     }
 
     .projects h2 {
-        margin: -185px 0 72px 0;
-        margin: -100px 0 72px 0;
         font-size: 42px;
         letter-spacing: 2px;
         color: #1C2818;
