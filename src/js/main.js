@@ -16,20 +16,29 @@
 // ПСЕВДО СКРОЛЛ
     let body = document.body;
     let resizableElement = document.getElementById("resizable");
-    
+    function debounce(method, delay) {
+      clearTimeout(method._tId);
+      method._tId= setTimeout(function(){
+        method();
+      }, delay);
+    }
     window.addEventListener("scroll", function() {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      let scrollHeight = body.scrollHeight - window.innerHeight;
-      // let incrementalFactor = 2.35;
-      let incrementalFactor = 3; 
-      let scrollPercentage = ((scrollTop - 100) / scrollHeight) * 100;
-      let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
-      // let arrows = document.querySelector('.arrow-wrap');
-      resizableElement.style.height = 1 + "%";
+      const handleScroll = ()=>{
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let scrollHeight = body.scrollHeight - window.innerHeight;
+        // let incrementalFactor = 2.35;
+        let incrementalFactor = 3;
+        let scrollPercentage = ((scrollTop - 100) / scrollHeight) * 100;
+        let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
+        // let arrows = document.querySelector('.arrow-wrap');
+        resizableElement.style.height = 1 + "%";
 
-      if (scrollPercentage >= 11) {
-        resizableElement.style.height = scrollPercentageFast + "%";
+        if (scrollPercentage >= 11) {
+          resizableElement.style.height = scrollPercentageFast + "%";
+        }
       }
+
+      debounce(handleScroll, 50);
 
       // if (scrollPercentage >= 67) {
       //   arrows.classList.add('arrow-wrap-active')
