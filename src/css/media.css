@@ -47,7 +47,7 @@
     .burgrer-wrap {
         height: 223px;
         position: fixed;
-        bottom: 5dvh;
+        bottom: calc(5dvh - 1px);
         right: 28px;
     }
 
@@ -123,7 +123,7 @@
             align-items: center;
             justify-content: center;
             position: fixed;
-            bottom: 5dvh;
+            bottom: calc(5dvh - 1px);
             right: 28px;
             border: 1px solid #D3E1E1;
             background: #fff;
