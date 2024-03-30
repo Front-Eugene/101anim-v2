@@ -24,10 +24,13 @@
     }
 
     .burgrer-wrap {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
         height: 223px;
         position: absolute;
         position: fixed;
-        bottom: 5dvh;
+        bottom: 36px;
         right: 28px;
     }
 
