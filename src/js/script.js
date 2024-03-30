@@ -25,7 +25,16 @@ document.addEventListener('mouseleave', function (e) {
     let cursor = document.querySelector('.custom-cursor');
     cursor.classList.add("hidden")
 });
+document.addEventListener('mouseout', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.add("hidden")
+});
 document.addEventListener('mouseenter', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.remove("hidden")
+});
+
+document.addEventListener('mouseover', function (e) {
     let cursor = document.querySelector('.custom-cursor');
     cursor.classList.remove("hidden")
 });
