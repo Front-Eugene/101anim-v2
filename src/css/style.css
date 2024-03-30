@@ -9,7 +9,9 @@
     -moz-user-select: none; 
     -ms-user-select: none; 
 }
-
+.hidden{
+    display: none;
+}
 @font-face {
     font-family: 'Rubik';
     src: url(../font/Rubik-Medium.ttf) format('ttf'), url(../font/Rubik-Medium.ttf) format('woff');
