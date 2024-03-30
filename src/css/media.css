@@ -39,7 +39,7 @@
         height: 223px;
         position: fixed;
         z-index: 40;
-        top: calc(90vh - 246px);
+        bottom: 5dvh;
         right: 28px;
     }
 
@@ -116,7 +116,7 @@
             justify-content: center;
             position: fixed;
             z-index: 40;
-            top: calc(90vh - 76px);
+            bottom: 5dvh;
             right: 28px;
             border: 1px solid #D3E1E1;
             background: #fff;
