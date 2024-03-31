@@ -18,17 +18,9 @@
     }
 
     .level {
-        width: calc(100% - 146px);
-        width: calc(100% - 113px);
-        margin-left: 48px;
-        max-width: 1773px;
     }
 
     footer {
-        width: calc(100% - 146px);
-        width: calc(100% - 113px);
-        margin-left: 48px;
-        max-width: 1773px;
     }
 
     .footer-right-item {
@@ -59,9 +51,6 @@
     }
 
     .form {
-        width: calc(100% - 120px);
-        width: calc(100% - 113px);
-        max-width: 1776px;
         margin: 0 auto 44px 48px;
     }
 
