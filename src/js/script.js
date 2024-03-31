@@ -14,6 +14,14 @@ burgerMenu.addEventListener("click", function() {
     burgerMenu.classList.toggle("burgrer-menu-active");
 });
 
+document.addEventListener('click', function(event) {
+    const isClickInside = burgerMenu.contains(event.target);
+    if (!isClickInside){
+        burgerMenu.classList.remove("burgrer-menu-active");
+    }
+});
+
+
 // МОБИЛЬНОЕ МЕНЮ
 
 document.addEventListener('mousemove', function (e) {
