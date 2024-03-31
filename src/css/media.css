@@ -24,9 +24,19 @@
     .burgrer-menu.burgrer-menu-active .items-mobile-wrap{
         opacity: 1;
         z-index: 10;
+        padding: 28px 0;
         height: initial;
         width: initial;
-        padding: 0 16px 26px 0;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .burgrer-menu .burgrer-item a{
+        padding-left: 17px;
+    }
+    .burgrer-menu .burgrer-item{
+        padding: 9px 0;
     }
     .burgrer-menu .items-mobile-wrap{
         position: fixed;
@@ -58,17 +68,19 @@
     }
 
     .burgrer-item a {
+        width: 100%;
         font-family: 'Rubik';
-        padding: 5px 0 5px 21px;
+        display: block;
         font-weight: 500;
         font-size: 14px;
         line-height: 16.59px;
         color: #575F53 ;
     }
 
-    .burgrer-item-active a {
-        padding: 5px 0 5px 22px;
+    .burgrer-menu  .burgrer-item-active a {
         color: #24683D;
+        display: block;
+        padding-left: 22px;
         border-left: 3px solid #24683D;
     }
 
@@ -516,7 +528,7 @@
     .politics-text-wrap {
         margin: -128px 0 0 0;
         padding: 0 28px 20px 28px;
-        z-index: 100;
+        z-index: 10;
     }
 
     .question-text-wrap h2 {
