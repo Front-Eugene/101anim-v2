@@ -722,8 +722,8 @@ nav {
         top: 30vh;
         max-width: 100vw;
         overflow: hidden;
-        padding: 96px 0 0 0;
-        margin: 0 auto -26px auto;
+        padding: 100px 0 0 0;
+        margin: 0 auto -36px auto;
     }
     .arrow-wrap {
         margin: 0 auto;
