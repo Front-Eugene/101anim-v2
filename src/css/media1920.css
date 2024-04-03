@@ -41,7 +41,12 @@
 
     /* FORM */
     main{
-        padding: 0 48px;
+        /*padding: 0 48px;*/
+    }
+
+    main section:last-child{
+        margin-left:48px;
+        margin-right:48px;
     }
 
     .form-title h2 {
@@ -60,7 +65,7 @@
 
     .question {
         width: 100%;
-        max-width: 1824px;
+        max-width: 1920px;
     }
 
     /* QUESTION */
