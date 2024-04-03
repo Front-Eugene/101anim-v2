@@ -4,9 +4,16 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 1000px) {
+    .level{
+        margin-top: 0;
+    }
+    .arrow-wwrap{
+        display: none;
+    }
     .burgrer-menu, .m-hidden{
         display: block;
     }
+
     .burgrer-menu .cross{
         width: 0;
         height: 0;
