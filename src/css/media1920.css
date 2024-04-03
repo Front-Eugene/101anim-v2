@@ -21,6 +21,7 @@
     }
 
     footer {
+        margin:0 48px;
     }
 
     .footer-right-item {
@@ -39,19 +40,18 @@
     /* MAIN */
 
     /* FORM */
-
-    /* .form-title {
-        margin: 128px 0 0 -31px;
-    } */
+    main{
+        padding: 0 48px;
+    }
 
     .form-title h2 {
         /* font-family: 'Rubik';
         font-weight: 500; */
-        margin: 0 0 36px 48px;
+        margin: 0 0 36px 0;
     }
 
     .form {
-        margin: 0 auto 44px 48px;
+        margin: 0 auto 44px 0;
     }
 
     /* FORM */
@@ -60,6 +60,7 @@
 
     .question {
         width: 100%;
+        max-width: 1824px;
     }
 
     /* QUESTION */
