@@ -987,9 +987,10 @@ nav {
 
     .level {
         height: 605px;
+
         position: relative;
         margin: 0 auto;
-        margin: -70px auto 0 auto;
+        margin: -70px auto 32px auto;
         /* background: #F2FBF5; */
         background: url(../img/background-main.svg);
     }
