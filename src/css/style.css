@@ -9,7 +9,9 @@
     -moz-user-select: none; 
     -ms-user-select: none; 
 }
-
+.hidden{
+    display: none;
+}
 @font-face {
     font-family: 'Rubik';
     src: url(../font/Rubik-Medium.ttf) format('ttf'), url(../font/Rubik-Medium.ttf) format('woff');
@@ -42,9 +44,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.burgrer-menu {
-    display: none;
-}
 
 .burgrer {
     display: none;
@@ -532,7 +531,7 @@ nav {
 }
 
 .marquee {
-    animation: scroll 20s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 @keyframes scroll {
@@ -718,15 +717,18 @@ nav {
 /* ПРЕИМУЩЕСТВА */
 
 /* ПРОЕКТЫ */
-
-    .arrow-wrap {
+    .arrow-wwrap{
         position: sticky;
-        width: 53rem;
-        /* margin: 0 auto 200px auto; */
-        margin: 0 auto 159px auto;
-        padding: 96px 0 0 0;
-        height: 20px;
         top: 30vh;
+        max-width: 100vw;
+        overflow: hidden;
+        padding: 100px 0 0 0;
+        margin: 0 auto -36px auto;
+    }
+    .arrow-wrap {
+        margin: 0 auto;
+        width: 53rem;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -752,8 +754,6 @@ nav {
     }
 
     .projects h2 {
-        margin: -185px 0 72px 0;
-        margin: -100px 0 72px 0;
         font-size: 42px;
         letter-spacing: 2px;
         color: #1C2818;
@@ -986,11 +986,11 @@ nav {
     }
 
     .level {
-        width: 1182px;
         height: 605px;
+
         position: relative;
         margin: 0 auto;
-        margin: -70px auto 0 auto;
+        margin: -70px auto 32px auto;
         /* background: #F2FBF5; */
         background: url(../img/background-main.svg);
     }
@@ -1185,15 +1185,11 @@ nav {
     }
 
     .footer-send {
-        width: 1184px;
-        margin: 0px auto 48px;
-        width: calc(100% - 113px);
         margin: 0 48px 48px 48px;
     }
 
 
     .form {
-        width: 1182px;
         height: 455px;
         margin: 0 0 44px 0;
         position: relative;
@@ -1693,7 +1689,6 @@ nav {
 /* ПОДВАЛ */
 
     footer {
-        width: 1182px;
         height: 415px;
         margin: 32px auto 48px auto;
         border: 1px solid #D3E1E1;

@@ -9,23 +9,18 @@ window.addEventListener('scroll', function () {
 // МОБИЛЬНОЕ МЕНЮ
 
 let burgerMenu = document.querySelector(".burgrer-menu");
-let burgerBtnOpen = document.querySelector(".burgrer-menu-btn");
-let burgerBtnClose = document.querySelector(".close-btn");
-
-burgerBtnOpen.addEventListener("click", function() {
-  burgerMenu.classList.toggle("burgrer-menu-active");
-  burgerBtnOpen.classList.remove("burgrer-menu-btn-active");
-});
 
 burgerMenu.addEventListener("click", function() {
-  burgerMenu.classList.remove("burgrer-menu-active");
-  burgerBtnOpen.classList.add("burgrer-menu-btn-active");
+    burgerMenu.classList.toggle("burgrer-menu-active");
 });
 
-burgerBtnClose.addEventListener("click", function() {
-  burgerMenu.classList.remove("burgrer-menu-active");
-  burgerBtnOpen.classList.add("burgrer-menu-btn-active");
+document.addEventListener('click', function(event) {
+    const isClickInside = burgerMenu.contains(event.target);
+    if (!isClickInside){
+        burgerMenu.classList.remove("burgrer-menu-active");
+    }
 });
+
 
 // МОБИЛЬНОЕ МЕНЮ
 
@@ -33,6 +28,23 @@ document.addEventListener('mousemove', function (e) {
     let cursor = document.querySelector('.custom-cursor');
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
+});
+document.addEventListener('mouseleave', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.add("hidden")
+});
+document.addEventListener('mouseout', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.add("hidden")
+});
+document.addEventListener('mouseenter', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.remove("hidden")
+});
+
+document.addEventListener('mouseover', function (e) {
+    let cursor = document.querySelector('.custom-cursor');
+    cursor.classList.remove("hidden")
 });
 
 document.addEventListener('DOMContentLoaded', function () {

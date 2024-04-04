@@ -16,20 +16,29 @@
 // ПСЕВДО СКРОЛЛ
     let body = document.body;
     let resizableElement = document.getElementById("resizable");
-    
+    function debounce(method, delay) {
+      clearTimeout(method._tId);
+      method._tId= setTimeout(function(){
+        method();
+      }, delay);
+    }
     window.addEventListener("scroll", function() {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      let scrollHeight = body.scrollHeight - window.innerHeight;
-      // let incrementalFactor = 2.35;
-      let incrementalFactor = 3; 
-      let scrollPercentage = ((scrollTop - 100) / scrollHeight) * 100;
-      let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
-      // let arrows = document.querySelector('.arrow-wrap');
-      resizableElement.style.height = 1 + "%";
+      const handleScroll = ()=>{
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let scrollHeight = body.scrollHeight - window.innerHeight;
+        // let incrementalFactor = 2.35;
+        let incrementalFactor = 3;
+        let scrollPercentage = ((scrollTop - 100) / scrollHeight) * 100;
+        let scrollPercentageFast = ((scrollTop - 700) / scrollHeight) * 100 * incrementalFactor;
+        // let arrows = document.querySelector('.arrow-wrap');
+        resizableElement.style.height = 1 + "%";
 
-      if (scrollPercentage >= 11) {
-        resizableElement.style.height = scrollPercentageFast + "%";
+        if (scrollPercentage >= 11) {
+          resizableElement.style.height = scrollPercentageFast + "%";
+        }
       }
+
+      debounce(handleScroll, 50);
 
       // if (scrollPercentage >= 67) {
       //   arrows.classList.add('arrow-wrap-active')
@@ -163,6 +172,7 @@ function checkOverlap() {
 
     arrows.style.minWidth = "53rem";
 
+
     arrows.style.width = `calc(53rem + ${scrollPercentage} * 5px)`;
 
     if (
@@ -181,7 +191,7 @@ function checkOverlap() {
         arrowsPosition.right >= TextPosition2.left &&
         arrowsPosition.left <= TextPosition2.right &&
         arrowsPosition.bottom >= TextPosition2.top &&
-        arrowsPosition.top <= TextPosition2.bottom
+        arrowsPosition.top <= TextPosition2.bottom || scrollPercentage > 110
       ) { 
           arrows.style.scale = '1.5'
           arrows.style.opacity = '0'

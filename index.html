@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href="src/img/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon2.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon-16x16.png">
+    <link rel="manifest" href="src/img/site.webmanifest">
+    <link rel="mask-icon" href="src/img/safari-pinned-tab.svg" color="#1B6D39">
+    <meta name="msapplication-TileColor" content="#1B6D39">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="src/css/media1920.css">
     <link rel="stylesheet" href="src/css/media.css">
-    <title>101</title>
+    <title>Компания 101 | О нас</title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -33,7 +38,7 @@
     <header>
         <div class="header-nav">
             <div class="logo link-element">
-                <a href="index.html">
+                <a href="https://100-1.tech/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="23" viewBox="0 0 60 23" fill="none">
                         <path d="M48 0H60V5.59459V23H54V5.63265H48V0Z" fill="#1C2818" />
                         <path d="M0 0H12V5.59459V23H6V5.63265H0V0Z" fill="#1C2818" />
@@ -46,14 +51,14 @@
     
             <nav>
                 <div class="nav-item nav-item-active link-element">
-                    <a href="index.html">о нас</a>
+                    <a href="https://100-1.tech/">о нас</a>
                 </div>
     
                 <div class="nav-item link-element">
-                    <a href="src/pages/contact.html">контакты</a>
+                    <a href="https://100-1.tech/contact">связаться</a>
                 </div>
                 <div class="nav-item link-element">
-                    <a href="src/pages/question.html">ответы на вопросы</a>
+                    <a href="https://100-1.tech/faq">ответы на вопросы</a>
                 </div>
             </nav>
         </div>
@@ -90,36 +95,33 @@
         <div class="burgrer-menu"> <!-- мобильное меню -->
             <div class="burgrer-wrap">
                 <div class="items-mobile-wrap">
-                    <div class="burgrer-item burgrer-item-active" style="padding: 36px 0 0 0;">
-                        <a href="index.html">
+                    <div class="burgrer-item burgrer-item-active" >
+                        <a href="https://100-1.tech/">
                             О НАС
                         </a>
                     </div>
-    
-                    <div class="burgrer-item" style="padding-top: 19px;">
-                        <a href="src/pages/contact.html">
-                            КОНТАКТЫ
+
+                    <div class="burgrer-item" >
+                        <a href="https://100-1.tech/contact">
+                            СВЯЗАТЬСЯ
                         </a>
                     </div>
-    
-                    <div class="burgrer-item" style="padding-top: 19px;">
-                        <a href="src/pages/question.html">
+
+                    <div class="burgrer-item" >
+                        <a href="https://100-1.tech/faq">
                             ОТВЕТЫ НА ВОПРОСЫ
                         </a>
                     </div>
                 </div>
-                <div class="close-btn">
-                    <div class="cross"></div>
-                </div>
             </div>
-        </div> 
-        <div class="burgrer-menu-btn burgrer-menu-btn-active"> <!-- мобильная кнопка -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <rect y="7" width="24" height="2" fill="#24683D"/>
-                <rect x="8" y="15" width="16" height="2" fill="#24683D"/>
-            </svg>
-        </div> 
-
+            <div class="burgrer-menu-btn"> <!-- мобильная кнопка -->
+                <svg class="open-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect y="7" width="24" height="2" fill="#24683D"/>
+                    <rect x="8" y="15" width="16" height="2" fill="#24683D"/>
+                </svg>
+                <div class="cross"></div>
+            </div>
+        </div>
         <section class="scroll-to section-1 screen">
             <svg class="screen-svg-top" xmlns="http://www.w3.org/2000/svg" width="847" height="325"
                 viewBox="0 0 847 325" fill="none">
@@ -367,17 +369,17 @@
                         fill="#1C2818" />
                 </svg>
 
-                <h1 class="screen-title">БОЛЬШЕ, ЧЕМ ВОЗМОЖНО</h1>
+                <h1 class="screen-title">IT-РЕШЕНИЯ<br class="m-hidden"/> ДЛЯ ОТЕЛЕЙ</h1>
                 <p class="screen-text">
                     Результат работы компании “101” - повышение прибыли,
                     снижение затрат и лояльность гостей к вашему бренду.
                 </p>
-                
-                <a href="src/pages/contact.html">
-                    <button class="contact-btn link-element" style="font-weight: 100 !important;">
-                        связаться
-                    </button>
-                </a>
+
+                <button
+                        onclick="window.open('https://100-1.tech/contact','_self')"
+                        class="contact-btn link-element" style="font-weight: 100 !important;">
+                    связаться
+                </button>
             </div>
 
             <div class="wrap">
@@ -922,7 +924,8 @@
         <section class="scroll-to section-4 projects">
             <!-- <h2 id="trigger-text-1">РЕАЛИЗОВАНЫ ПРОЕКТЫ</h2> -->
             <span class="scroll-content">
-                <div class="arrow-wrap">
+                <div class="arrow-wwrap">
+                    <div class="arrow-wrap">
                     <svg class="arrow-left" style="transition: .5s;" xmlns="http://www.w3.org/2000/svg" width="44" height="16" viewBox="0 0 44  16" fill="none">
                         <rect width="36" height="12" transform="matrix(1 0 0 -1 0 16)" fill="#62B480" fill-opacity="0.25"/>
                         <rect width="36" height="12" transform="matrix(1 0 0 -1 8 12)" fill="#24683D"/>
@@ -933,6 +936,7 @@
                         <rect width="36" height="12" transform="matrix(1 0 0 -1 0 12)" fill="#24683D"/>
                         <rect width="8" height="8" transform="matrix(1 0 0 -1 2 10)" fill="white"/>
                     </svg>
+                </div>
                 </div>
                 <h2 id="trigger-text-1">РЕАЛИЗОВАНЫ ПРОЕКТЫ</h2>
                 <span>
@@ -1258,12 +1262,12 @@
                 <p class="screen-text level-text">
                     Помогаем адаптировать отель под новые реалии гостиничного бизнеса.
                 </p>
-                
-                <a href="src/pages/contact.html">
-                    <button class="contact-btn lelel-btn-mobile link-element">
+
+                    <button
+                            onclick="window.open('https://100-1.tech/contact','_self')"
+                            class="contact-btn lelel-btn-mobile link-element">
                         связаться
                     </button>
-                </a>
             </div>
         </section>
     </main>
@@ -1305,19 +1309,19 @@
                 <div class="footer-right footer-right-item">
                     <ul>
                         <li class="footer-link link-element">
-                            <a href="index.html">О НАС</a>
+                            <a href="https://100-1.tech/">О НАС</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/contact.html">КОНТАКТЫ</a>
+                            <a href="https://100-1.tech/contact">СВЯЗАТЬСЯ</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/question.html">ОТВЕТЫ НА ВОПРОСЫ</a>
+                            <a href="https://100-1.tech/faq">ОТВЕТЫ НА ВОПРОСЫ</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/politics.html">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</a>
+                            <a href="https://100-1.tech/policy">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</a>
                         </li>
                     </ul>
                 </div>
@@ -1355,11 +1359,11 @@
                     </li>
     
                     <li class="footer-link link-element">
-                        <a href="src/pages/contact.html">КОНТАКТЫ</a>
+                        <a href="src/pages/contact.html">СВЯЗАТЬСЯ</a>
                     </li>
     
                     <li class="footer-link link-element">
-                        <a href="src/pages/question.html">ОТВЕТЫ НА ВОПРОСЫ</a>
+                        <a href="https://100-1.tech/faq">ОТВЕТЫ НА ВОПРОСЫ</a>
                     </li>
     
                     <li class="footer-link link-element">
@@ -1419,19 +1423,19 @@
                 <div class="footer-right">
                     <ul>
                         <li class="footer-link link-element">
-                            <a href="index.html">О НАС</a>
+                            <a href="https://100-1.tech/">О НАС</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/contact.html">КОНТАКТЫ</a>
+                            <a href="https://100-1.tech/contact">СВЯЗАТЬСЯ</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/question.html">ОТВЕТЫ НА ВОПРОСЫ</a>
+                            <a href="https://100-1.tech/faq">ОТВЕТЫ НА ВОПРОСЫ</a>
                         </li>
         
                         <li class="footer-link link-element">
-                            <a href="src/pages/politics.html">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</a>
+                            <a href="https://100-1.tech/policy">ПОЛИТИКА КОНФИДЕЦИАЛЬНОСТИ</a>
                         </li>
                     </ul>
                 </div>

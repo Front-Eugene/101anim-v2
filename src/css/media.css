@@ -1,33 +1,71 @@
 /* @media screen and (max-width: 375px) { */
+.burgrer-menu, .m-hidden{
+    display: none;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1000px) {
-
-    /* МОБИЛЬНОЕ МЕНЮ */
-
-    .burgrer-menu {
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        transition: .2s;
+    .level{
+        margin-top: 0;
+    }
+    .arrow-wwrap{
+        display: none;
+    }
+    .burgrer-menu, .m-hidden{
+        display: block;
     }
 
-    .burgrer-menu-active {
+    .burgrer-menu .cross{
+        width: 0;
+        height: 0;
+        transition: .2s;
+    }
+    .burgrer-menu.burgrer-menu-active .cross{
+        width: 50%;
+        height: 50%;
+    }
+    .burgrer-menu .open-btn{
+        width: auto;
+        height: auto;
+        transition: .2s;
+    }
+    .burgrer-menu.burgrer-menu-active .items-mobile-wrap{
         opacity: 1;
-        z-index: 500;
+        z-index: 10;
+        padding: 28px 0;
+        height: initial;
+        width: initial;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .burgrer-menu .burgrer-item a{
+        padding-left: 17px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .burgrer-menu .burgrer-item{
+        padding: 3px 0;
+    }
+    .burgrer-menu .items-mobile-wrap{
+        position: fixed;
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        right: 26px;
+        padding: 0;
+    }
+    .burgrer-menu.burgrer-menu-active .open-btn{
+        width: 0;
+        height: 0;
     }
 
     .burgrer-wrap {
         height: 223px;
-        position: absolute;
         position: fixed;
-        bottom: 36px;
+        z-index: 40;
+        bottom: 5dvh;
         right: 28px;
     }
 
@@ -39,17 +77,19 @@
     }
 
     .burgrer-item a {
+        width: 100%;
         font-family: 'Rubik';
-        padding: 5px 0 5px 21px;
+        display: block;
         font-weight: 500;
         font-size: 14px;
         line-height: 16.59px;
         color: #575F53 ;
     }
 
-    .burgrer-item-active a {
-        padding: 5px 0 5px 22px;
+    .burgrer-menu  .burgrer-item-active a {
         color: #24683D;
+        display: block;
+        padding-left: 22px;
         border-left: 3px solid #24683D;
     }
 
@@ -101,19 +141,13 @@
             height: 48px;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
             position: fixed;
-            bottom: 36px;
+            z-index: 40;
+            bottom: 5dvh;
             right: 28px;
             border: 1px solid #D3E1E1;
             background: #fff;
-            z-index: -1;
-            opacity: 0;
-        }
-
-        .burgrer-menu-btn-active {
-            z-index: 999;
-            opacity: 1;
         }
 
     /* МОБИЛЬНОЕ МЕНЮ */
@@ -125,7 +159,7 @@
     
     body {
         position: relative;
-        width: 100%;
+        width: 100vw;
         margin: 0 auto;
         padding: 0;
         /* overflow-x: hidden; */
@@ -378,6 +412,8 @@
     }
 
     .projects {
+        max-width: 100vw;
+        overflow: hidden;
         width: 100%;
         height: auto;
         padding: 148px 0;
@@ -501,7 +537,7 @@
     .politics-text-wrap {
         margin: -128px 0 0 0;
         padding: 0 28px 20px 28px;
-        z-index: 100;
+        z-index: 10;
     }
 
     .question-text-wrap h2 {
@@ -623,7 +659,7 @@
 
     .form-item input {
         width: 99.8%;
-        padding: 10px 0 0px 0;
+        padding: 27px 0 0 20px;
     }
     /* TUT */
 
@@ -712,7 +748,7 @@
         position: absolute;
         width: calc(100% + 1px);
         height: 52px;
-        padding: 0 36%;
+        padding: 0 34%;
         margin: 88px 0 0 -15px;
     }
 
@@ -782,7 +818,7 @@
     }
 
     .contact-send-wrap {
-        min-height: calc(100dvh - 61px) !important;
+        min-height: calc(100vh - 61px) !important;
         align-items: center;
         justify-content: space-around;
         padding: 0;
