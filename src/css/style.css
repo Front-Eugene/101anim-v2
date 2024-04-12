@@ -1746,10 +1746,6 @@ nav {
         border-right: 1px solid #D3E1E1;
     }
 
-    .contact-item:hover {
-        background: #F9FFFB;
-    }
-
     .contact-item a {
         display: flex;
         color: #1C2818;
@@ -1761,6 +1757,14 @@ nav {
         height: 70px;
     }
 
+    .contact-bg {
+        background: #fff !important;
+    }
+
+    .contact-bg-hover:hover {
+        background: #F9FFFB;
+    }
+
     .footer-link {
         margin: 16px 0 0 0;
         transition: .3s;
@@ -1768,6 +1772,10 @@ nav {
 
     .footer-link:hover {
         margin: 16px 0 0 8px;
+    }
+
+    .contact-item:hover  {
+        background: #F9FFFB;
     }
 
     .footer-link a {
